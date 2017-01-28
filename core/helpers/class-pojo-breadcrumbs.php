@@ -24,13 +24,6 @@ class Pojo_Class_BreadCrumbs {
 		echo '<div id="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">';
 
 		foreach ( $this->_breadcrumbs as $link => $title ) {
-			if($title=='מוצר'){
-					$title= 'חנות';
-				if(strpos('s'.$link,'shop')){
-					$link='/חניתה';
-				}
-			}
-
 			if ( 0 === $link ) {
 				if ( $this->_print_current_page )
 					$output[] = $this->_before . $title . $this->_after;

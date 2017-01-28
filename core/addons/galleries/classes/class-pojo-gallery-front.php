@@ -124,9 +124,8 @@ class Pojo_Gallery_Front {
 			endforeach;
 			
 			if ( ! empty( $output_array ) ) :
-				$index = Pojo_MasterSlider::get_index();
 				$js_options = array(
-					'id' => 'pojo-gallery-' . $index,
+					'id' => 'pojo-gallery-' . $post_id,
 					'arrows' => 'hide' !== atmb_get_field( 'gallery_arrow', $post_id ),
 					'lightbox' => 'hide' !== atmb_get_field( 'gallery_lightbox', $post_id ),
 					'params' => array(
@@ -178,7 +177,7 @@ class Pojo_Gallery_Front {
 					'<div style="direction: ltr;" class="pojo-gallery%3$s">
 						<div class="pojo-gallery-%1$d pojo-gallery-wrapper master-slider ms-skin-pojo" id="pojo-gallery-%1$d">%2$s</div>
 					</div>',
-					$index,
+					$post_id,
 					implode( '', $output_array ),
 					! empty( $thumb_ratio ) ? ' thumb-ratio-' . $thumb_ratio : ''
 				);

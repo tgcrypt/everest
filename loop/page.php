@@ -14,7 +14,7 @@ if ( have_posts() ) :
 				<?php endif; ?>
 				<?php if ( pojo_is_show_page_title() ) : ?>
 					<div class="page-title">
-						<h1><?php the_title(); ?></h1>
+						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</div>
 				<?php endif; ?>
 			</header>

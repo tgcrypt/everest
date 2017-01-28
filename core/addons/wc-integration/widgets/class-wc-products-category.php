@@ -2,6 +2,12 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Pojo_Widget_WC_Products_Category extends Pojo_Widget_Base {
+
+	public function add_product_post_class( $classes ) {
+		$classes[] = 'product';
+
+		return $classes;
+	}
 	
 	public function __construct() {
 		$this->_form_fields = array();
@@ -109,13 +115,15 @@ class Pojo_Widget_WC_Products_Category extends Pojo_Widget_Base {
 		
 		if ( ! $products->have_posts() )
 			return;
-
+		
+		add_filter( 'post_class', array( $this, 'add_product_post_class' ) );
+		
 		$woocommerce_loop['columns'] = $instance['columns'];
 		
 		$instance['title'] = apply_filters( 'widget_title', $instance['title'] );
 
 		echo $args['before_widget'];
-
+		
 		if ( ! empty( $instance['title'] ) )
 			echo $args['before_title'] . $instance['title'] . $args['after_title'];
 
@@ -133,7 +141,7 @@ class Pojo_Widget_WC_Products_Category extends Pojo_Widget_Base {
 		echo '</div>';
 		
 		echo $args['after_widget'];
+
+		remove_filter( 'post_class', array( $this, 'add_product_post_class' ) );
 	}
-
-
 }

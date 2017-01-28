@@ -71,6 +71,7 @@ class Pojo_Widget_Gallery extends Pojo_Widget_Base {
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {
+		$instance = wp_parse_args( $instance, $this->_get_default_values() );
 		$args = $this->_parse_widget_args( $args, $instance );
 		
 		$instance['title'] = apply_filters( 'widget_title', $instance['title'] );

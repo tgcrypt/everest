@@ -6,7 +6,7 @@ $display_type = po_get_display_type();
 	<?php pojo_breadcrumbs(); ?>
 <?php endif; ?>
 <?php if ( ! is_home() && ! is_front_page() ) : ?>
-<h1><?php
+<h1 class="entry-title"><?php
 	if ( is_day() ) :
 		printf( __( 'Daily Archive: %s', 'pojo' ), get_the_date() );
 	elseif ( is_month() ) :

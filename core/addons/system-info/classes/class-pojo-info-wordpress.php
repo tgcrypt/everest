@@ -102,7 +102,7 @@ class Pojo_WordPress_Reporter extends Pojo_Info_Base_Reporter {
 		$update_data = Pojo_Core::instance()->licenses->api->get_version( $license_key );
 
 		$status = __( 'Connected', 'pojo' );
-		if ( ! is_object( $update_data ) || empty( $update_data->new_version ) || true ) {
+		if ( ! is_object( $update_data ) || empty( $update_data->new_version ) ) {
 			$status = __( 'Not Connected', 'pojo' );
 		}
 		

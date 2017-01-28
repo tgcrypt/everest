@@ -7,11 +7,11 @@ class Pojo_Feedback {
 
 	public function admin_enqueue_scripts() {
 		$feedback_list = array(
-			array(
-				'camp_id' => '2',
-				'content' => __( 'Want to improve your Pojo theme? Rate our new Forms feature so we know what\'s important to you.', 'pojo' ),
-				'screen' => array( 'edit-pojo_forms', 'pojo_forms' ),
-			),
+			//array(
+			//	'camp_id' => '2',
+			//	'content' => __( 'Want to improve your Pojo theme? Rate our new Forms feature so we know what\'s important to you.', 'pojo' ),
+			//	'screen' => array( 'edit-pojo_forms', 'pojo_forms' ),
+			//),
 		);
 
 		// Get dismissed feedback

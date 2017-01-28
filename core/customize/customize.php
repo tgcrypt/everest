@@ -212,13 +212,18 @@ class Pojo_Theme_Customize {
 			foreach ( $google_fonts as &$font ) {
 				$font = str_replace( ' ', '+', $font ) . ':100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic';
 			}
-			printf( '<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=%s">', implode( '|', $google_fonts ) );
+			$fonts_url = sprintf( 'https://fonts.googleapis.com/css?family=%s', implode( '|', $google_fonts ) );
+			
+			if ( 'he-IL' === get_bloginfo( 'language' ) ) {
+				$fonts_url .= '&subset=hebrew';
+			}
+			printf( '<link rel="stylesheet" type="text/css" href="' . $fonts_url . '">' );
 		}
 
 		$google_early_access_fonts = array_unique( $google_early_access_fonts );
 		if ( ! empty( $google_early_access_fonts ) ) {
 			foreach ( $google_early_access_fonts as $current_font ) {
-				printf( '<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/%s.css">', strtolower( str_replace( ' ', '', $current_font ) ) );
+				printf( '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/%s.css">', strtolower( str_replace( ' ', '', $current_font ) ) );
 			}
 		}
 
@@ -341,8 +346,66 @@ class Pojo_Theme_Customize {
 		wp_enqueue_script( 'pojo-theme-customizer-controls', get_template_directory_uri() . '/core/assets/admin-ui/theme-customizer-controls.js', array( 'jquery', 'pojo-fields-plugin', 'wp-color-picker', 'customize-controls' ), false, true );
 		wp_enqueue_style( 'pojo-theme-customizer-controls', get_template_directory_uri() . '/core/assets/admin-ui/theme-customizer-controls.css' );
 	}
+
+	private function _get_remote_customizer_url() {
+		$default_langs = array(
+			'en_US' => 'en',
+			'he_IL' => 'he',
+		);
+
+		if ( isset( $default_langs[ get_locale() ] ) )
+			$lang = $default_langs[ get_locale() ];
+		else
+			$lang = 'en';
+
+		$response = wp_remote_post(
+			'http://pojo.me/',
+			array(
+				'sslverify' => false,
+				'timeout' => 30,
+				'body' => array(
+					'pojo_action' => 'get_import_files',
+					'theme' => Pojo_Core::instance()->licenses->updater->theme_name,
+					'license' => Pojo_Core::instance()->licenses->get_license_key(),
+					'lang' => $lang,
+				)
+			)
+		);
+
+		if ( is_wp_error( $response ) || 200 !== (int) wp_remote_retrieve_response_code( $response ) ) {
+			return false;
+		}
+
+		$response_data = json_decode( wp_remote_retrieve_body( $response ), true );
+		if ( ! $response_data['success'] )
+			return false;
+
+		$files = $response_data['data'];
+
+		if ( empty( $files[ $lang ]['customizer'] ) )
+			return false;
+
+		return $files[ $lang ]['customizer'];
+	}
 	
 	public function sync_theme_mod() {
+		$url = $this->_get_remote_customizer_url();
+		if ( $url ) {
+			$customizer_options = json_decode( file_get_contents( $url ), true );
+
+			if ( ! empty( $customizer_options ) ) {
+				foreach ( $customizer_options as $key => $value ) {
+					$option = get_theme_mod( $key );
+					if ( ! $option ) {
+						set_theme_mod( $key, $value );
+					}
+				}
+
+				return;
+			}
+		}
+
+		// Legacy defaults
 		$sections = $this->get_theme_sections();
 		if ( empty( $sections ) )
 			return;

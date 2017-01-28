@@ -133,10 +133,10 @@ var pojo_admin_customizer = ( function( $, window ) {
 									if ( undefined !== _pojo_webfont_list[ to ] ) {
 										var font_lower_string = to.replace( /\s+/g, '' ).toLowerCase();
 										if ( 'googlefonts' === _pojo_webfont_list[ to ] && 0 >= $( 'link[href*="' + to + '"]' ).length ) {
-											$( 'link:last' ).after( '<link href="//fonts.googleapis.com/css?family=' + to + ':100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">' );
+											$( 'link:last' ).after( '<link href="https://fonts.googleapis.com/css?family=' + to + ':100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">' );
 										}
 										else if ( 'earlyaccess' === _pojo_webfont_list[ to ] && 0 >= $( 'link[href*="' + font_lower_string + '"]' ).length ) {
-											$( 'link:last' ).after( '<link href="//fonts.googleapis.com/earlyaccess/' + font_lower_string + '.css" rel="stylesheet" type="text/css">' );
+											$( 'link:last' ).after( '<link href="https://fonts.googleapis.com/earlyaccess/' + font_lower_string + '.css" rel="stylesheet" type="text/css">' );
 										}
 									}
 								} else if ( 'weight' === field_key ) {

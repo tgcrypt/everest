@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Pojo_Maintenance {
 	
-	protected static $_db_version = '0.8';
+	protected static $_db_version = '0.9';
 	protected static $_current_db_ver;
 	
 	public static function activate() {
@@ -125,7 +125,25 @@ class Pojo_Maintenance {
 			}
 			update_option( 'pojo_db_version', '0.8' );
 		}
-		
+
+		if ( version_compare( '0.9', self::$_current_db_ver, '>' ) ) {
+			// Check if current site used with Old Pojo Builder
+			$post_ids = $wpdb->get_col(
+				$wpdb->prepare(
+					'SELECT `post_id` FROM %1$s
+						WHERE `meta_key` = \'pf_id\'
+							AND `meta_value` = \'page-builder\';',
+					$wpdb->postmeta
+				)
+			);
+			
+			$is_used = ! empty( $post_ids );
+			if ( ! $is_used ) {
+			    update_option( 'pojo_builder_enable', 'disable' );
+			}
+
+			update_option( 'pojo_db_version', '0.9' );
+		}
 	}
 	
 }

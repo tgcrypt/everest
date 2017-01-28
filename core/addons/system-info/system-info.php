@@ -17,7 +17,7 @@ class Pojo_System_Info {
 	}
 
 	private function require_files() {
-		require POJO_CORE_DIRECTORY . '/addons/system-info/classes/abstracts/abstracts-class-pojo-info-base-reporter.php';
+		require POJO_CORE_DIRECTORY . '/addons/system-info/classes/class-pojo-info-base-reporter.php';
 		require POJO_CORE_DIRECTORY . '/addons/system-info/helpers/class-pojo-info-model-helper.php';
 	}
 

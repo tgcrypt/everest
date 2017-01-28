@@ -2,8 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Pojo_Slideshow_Shortcode {
-	
-	protected $_print_js = array();
+
 	//protected static $_index = array();
 	
 	public function do_shortcode( $atts = array() ) {
@@ -142,10 +141,11 @@ class Pojo_Slideshow_Shortcode {
 
 
 			$js_json = ! empty( $js_array ) ? json_encode( $js_array ) : '';
-			$this->_print_js[ $slide->ID ] = '$("div.pojo-slideshow-' . $slide->ID . '").bxSlider(' . $js_json . ');';
+			$print_js = '<script>jQuery(function($){$("div.pojo-slideshow-' . $slide->ID . '").bxSlider(' . $js_json . ');});</script>';
 
 			return sprintf(
-				'<div style="width: %s; height: %s; direction: ltr;" class="pojo-slideshow%s"><div class="pojo-slideshow-%d pojo-slideshow-wrapper">%s</div>%s</div>',
+				'%s<div style="width: %s; height: %s; direction: ltr;" class="pojo-slideshow%s"><div class="pojo-slideshow-%d pojo-slideshow-wrapper">%s</div>%s</div>',
+				$print_js,
 				esc_attr( $wrapper_width ),
 				esc_attr( $slide_height . 'px' ),
 				$js_array['pager'] ? ' slideshow-bullets' : '',
@@ -203,9 +203,10 @@ class Pojo_Slideshow_Shortcode {
 				if ( 0 === $slider_height = absint( atmb_get_field( 'slide_height', $slide->ID ) ) )
 					$slider_height = '1080';
 				
-				$index = Pojo_MasterSlider::get_index();
+				$uniqid = uniqid();
+
 				$js_options = array(
-					'id' => 'pojo-slideshow-' . $index,
+					'id' => 'pojo-slideshow-' . $uniqid,
 					'arrows' => empty( $navigation ) || 'both' === $navigation,
 					'thumblist' => false,
 					'bullets' => 'bullets' === $navigation || 'both' === $navigation,
@@ -237,30 +238,22 @@ class Pojo_Slideshow_Shortcode {
 				Pojo_MasterSlider::add_slider( $js_options );
 				return sprintf(
 					'<div style="direction: ltr;" class="pojo-slideshow">
-						<div class="pojo-slideshow-%1$d pojo-slideshow-wrapper master-slider ms-skin-pojo" id="pojo-slideshow-%1$d">%2$s</div>%3$s
+						<div class="pojo-slideshow-%1$s pojo-slideshow-%2$d pojo-slideshow-wrapper master-slider ms-skin-pojo" id="pojo-slideshow-%1$s">%3$s</div>%4$s
 					</div>',
-					$index,
+					$uniqid,
+					$slide->ID,
 					implode( '', $output_array ),
 					$edit_slide_link
 				);
 			}
 		}
-		
+
 		// Empty return..
 		return '';
-	}
-	
-	public function wp_footer() {
-		if ( empty( $this->_print_js ) )
-			return;
-		
-		?><script type="text/javascript">jQuery(document).ready(function($){<?php echo implode( '', $this->_print_js ); ?>});</script>
-	<?php
 	}
 
 	public function __construct() {
 		add_shortcode( 'pojo-slideshow', array( &$this, 'do_shortcode' ) );
-		add_action( 'wp_footer', array( &$this, 'wp_footer' ) );
 	}
 	
 }

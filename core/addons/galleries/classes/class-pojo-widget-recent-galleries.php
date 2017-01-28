@@ -169,19 +169,15 @@ class Pojo_Widget_Recent_Galleries extends Pojo_Widget_Base {
 		if ( ! empty( $instance['title'] ) )
 			echo $args['before_title'] . $instance['title'] . $args['after_title'];
 
-		if ( ! empty( $instance['category'] ) ) :
-			if ( $recent_posts->have_posts() ) :
-				do_action( 'pojo_recent_gallery_before_content_loop', $instance['style'] );
-				while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
-					pojo_get_content_template_part( 'recent_gallery', $instance['style'] );
-				endwhile;
-				do_action( 'pojo_recent_gallery_after_content_loop', $instance['style'] );
-				wp_reset_postdata();
-			else :
-				printf( '<p>%s</p>', __( 'No found posts.', 'pojo' ) );
-			endif;
+		if ( $recent_posts->have_posts() ) :
+			do_action( 'pojo_recent_gallery_before_content_loop', $instance['style'] );
+			while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
+				pojo_get_content_template_part( 'recent_gallery', $instance['style'] );
+			endwhile;
+			do_action( 'pojo_recent_gallery_after_content_loop', $instance['style'] );
+			wp_reset_postdata();
 		else :
-			printf( '<p>%s</p>', __( 'Galleries not found. Please select a category.', 'pojo' ) );
+			printf( '<p>%s</p>', __( 'No found posts.', 'pojo' ) );
 		endif;
 
 		echo $args['after_widget'];

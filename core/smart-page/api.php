@@ -285,15 +285,18 @@ function po_archive_metadata_show( $type, $parent_id = 0 ) {
  * @return bool
  */
 function po_single_metadata_show( $type ) {
-	if ( 'post' !== get_post_type() )
-		return false;
-	
-	$site_metadata = pojo_get_option( 'single_metadata_' . $type );
-	$single_metadata = atmb_get_field( 'po_single_metadata_' . $type );
-	if ( ! empty( $single_metadata ) )
-		$site_metadata = $single_metadata;
-	
-	return 'hide' !== $site_metadata;
+	if ( 'post' !== get_post_type() ) {
+		$bool = false;
+	} else {
+		$site_metadata = pojo_get_option( 'single_metadata_' . $type );
+		$single_metadata = atmb_get_field( 'po_single_metadata_' . $type );
+		if ( ! empty( $single_metadata ) ) {
+			$site_metadata = $single_metadata;
+		}
+
+		$bool = ( 'hide' !== $site_metadata );
+	}
+	return apply_filters( 'po_single_metadata_show', $bool, $type );
 }
 
 /**

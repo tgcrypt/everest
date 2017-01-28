@@ -21,7 +21,7 @@ endif;
 				<img src="<?php echo $image_url; ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" class="media-object" />
 				<div class="overlay-image"></div>
 				<div class="caption overlay-title">
-					<h4 class="grid-heading">
+					<h4 class="grid-heading entry-title">
 						<?php if ( 'hide' !== $_current_widget_instance['show_title'] ) : ?>
 							<?php the_title(); ?>
 						<?php endif; ?>

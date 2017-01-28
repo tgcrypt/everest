@@ -1,4 +1,4 @@
-/*! everest - v3.5.2 - 14-04-2016 */
+/*! everest - v4.0.1 - 20-12-2016 */
 /* = Built-in Fonts */
 @font-face {
   font-family: 'Open Sans Hebrew';
@@ -60,29 +60,29 @@
   font-family: 'Open Sans Hebrew Condensed';
   font-style: normal;
   font-weight: 300;
-  src: url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-light.eot);
-  src: url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-light.eot?#iefix) format('embedded-opentype'), url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-light.woff) format('woff'), url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-light.ttf) format('truetype');
+  src: url(../fonts/opensanshebrewcond/light.eot);
+  src: url(../fonts/opensanshebrewcond/light.eot?#iefix) format('embedded-opentype'), url(../fonts/opensanshebrewcond/light.woff) format('woff'), url(../fonts/opensanshebrewcond/light.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Open Sans Hebrew Condensed';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-regular.eot);
-  src: url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-regular.woff) format('woff'), url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-regular.ttf) format('truetype');
+  src: url(../fonts/opensanshebrewcond/regular.eot);
+  src: url(../fonts/opensanshebrewcond/regular.eot?#iefix) format('embedded-opentype'), url(../fonts/opensanshebrewcond/regular.woff) format('woff'), url(../fonts/opensanshebrewcond/regular.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Open Sans Hebrew Condensed';
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-bold.eot);
-  src: url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-bold.eot?#iefix) format('embedded-opentype'), url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-bold.woff) format('woff'), url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-bold.ttf) format('truetype');
+  src: url(../fonts/opensanshebrewcond/bold.eot);
+  src: url(../fonts/opensanshebrewcond/bold.eot?#iefix) format('embedded-opentype'), url(../fonts/opensanshebrewcond/bold.woff) format('woff'), url(../fonts/opensanshebrewcond/bold.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Open Sans Hebrew Condensed';
   font-style: normal;
   font-weight: 800;
-  src: url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-extrabold.eot);
-  src: url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-extrabold.eot?#iefix) format('embedded-opentype'), url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-extrabold.woff) format('woff'), url(../fonts/opensanshebrewcondensed/opensanshebrewcondensed-extrabold.ttf) format('truetype');
+  src: url(../fonts/opensanshebrewcond/extrabold.eot);
+  src: url(../fonts/opensanshebrewcond/extrabold.eot?#iefix) format('embedded-opentype'), url(../fonts/opensanshebrewcond/extrabold.woff) format('woff'), url(../fonts/opensanshebrewcond/extrabold.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Carmelit';
@@ -897,6 +897,9 @@ body.admin-preview-iframe #pojo-a11y-toolbar {
   margin: 0 auto 30px;
   padding: 0;
   *zoom: 1;
+}
+body:not(.single) .post_format-post-format-gallery .bx-wrapper {
+  margin: 0 auto;
 }
 .bx-wrapper img {
   max-width: 100%;

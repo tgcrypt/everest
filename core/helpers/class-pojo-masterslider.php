@@ -2,9 +2,6 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Pojo_MasterSlider {
-	
-	protected static $_slides = array();
-	protected static $_index  = 1;
 
 	/**
 	 * @param $options
@@ -47,8 +44,8 @@ class Pojo_MasterSlider {
 			return false;
 		
 		$params = $options['params'];
-		
-		self::$_slides[] = array(
+
+		$slider_data = array(
 			'id' => $options['id'],
 			'params' => $params,
 			'arrows' => $options['arrows'],
@@ -59,22 +56,8 @@ class Pojo_MasterSlider {
 			'bullets_params' => $options['bullets_params'],
 		);
 		
+		?><script>jQuery(function(){MasterSliderIntegration.createSlider(<?php echo wp_json_encode( $slider_data ); ?>);});</script><?php
+
 		return true;
 	}
-
-	/**
-	 * return void
-	 */
-	public static function wp_footer() {
-		?><script type="text/javascript">var PojoSliders=<?php echo json_encode( self::$_slides ); ?>;</script><?php
-	}
-
-	/**
-	 * @return int
-	 */
-	public static function get_index() {
-		return self::$_index++;
-	}
-
 }
-add_action( 'wp_footer', array( 'Pojo_MasterSlider', 'wp_footer' ) );

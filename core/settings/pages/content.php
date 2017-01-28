@@ -349,6 +349,32 @@ class Pojo_Settings_Page_Content extends Pojo_Settings_Page_Base {
 		
 		return $sections;
 	}
+
+	public function section_pojo_builder( $sections ) {
+		$fields = array();
+
+		$fields[] = array(
+			'id' => 'pojo_builder_enable',
+			'title' => __( 'Backend Editor', 'pojo' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'options' => array(
+				'' => __( 'Enable', 'pojo' ),
+				'disable' => __( 'Disable', 'pojo' ),
+			),
+			'std' => '',
+			'desc' => __( 'Keep this setting on Disable, so you can use the Elementor frontend editor and not the backend one.', 'pojo' ),
+		);
+		
+		$sections[] = array(
+			'id' => 'section-pojo-builder',
+			'page' => $this->_page_id,
+			'title' => __( 'Backend Builder (old version)', 'pojo' ),
+			'intro'  => __( 'This control will let you switch off the backend editor of the theme, so page design will be done on Elementor, the more advanced frontend page builder.', 'pojo' ),
+			'fields' => $fields,
+		);
+
+		return $sections;
+	}
 	
 	public function __construct( $priority = 10 ) {
 		$this->_page_id         = 'pojo-content';
@@ -360,6 +386,7 @@ class Pojo_Settings_Page_Content extends Pojo_Settings_Page_Base {
 		add_filter( 'pojo_register_settings_sections', array( &$this, 'section_content' ), 100 );
 		add_filter( 'pojo_register_settings_sections', array( &$this, 'section_posts' ), 110 );
 		add_filter( 'pojo_register_settings_sections', array( &$this, 'section_archive' ), 120 );
+		add_filter( 'pojo_register_settings_sections', array( &$this, 'section_pojo_builder' ), 160 );
 		
 		parent::__construct( $priority );
 	}

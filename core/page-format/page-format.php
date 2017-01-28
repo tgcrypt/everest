@@ -29,7 +29,7 @@ class Pojo_Page_Format {
 					'type' => 'editor',
 					'actions' => array(
 						array(
-							'selector' => '#postdivrich',
+							'selector' => '#postdivrich, #elementor-switch-mode',
 							'type' => 'show',
 						),
 						array(
@@ -48,7 +48,7 @@ class Pojo_Page_Format {
 						'type' => 'content',
 						'actions' => array(
 							array(
-								'selector' => '#postdivrich, #page-builder',
+								'selector' => '#postdivrich, #page-builder, #elementor-switch-mode',
 								'type' => 'hide',
 							),
 							array(
@@ -63,21 +63,23 @@ class Pojo_Page_Format {
 					);
 				}
 			}
-
-			$this->_formats['page-builder'] = array(
-				'title' => __( 'Builder', 'pojo' ),
-				'type' => 'builder',
-				'actions' => array(
-					array(
-						'selector' => '#postdivrich, div.pf-list-content-wrap',
-						'type' => 'hide',
+			
+			if ( 'disable' !== get_option( 'pojo_builder_enable' ) ) {
+				$this->_formats['page-builder'] = array(
+					'title' => __( 'Builder', 'pojo' ),
+					'type' => 'builder',
+					'actions' => array(
+						array(
+							'selector' => '#postdivrich, div.pf-list-content-wrap, #elementor-switch-mode',
+							'type' => 'hide',
+						),
+						array(
+							'selector' => '#page-builder',
+							'type' => 'show',
+						),
 					),
-					array(
-						'selector' => '#page-builder',
-						'type' => 'show',
-					),
-				),
-			);
+				);
+			}
 
 			foreach ( $this->_formats as $key => $format ) {
 				if ( 'editor' === $format['type'] )
@@ -192,6 +194,14 @@ class Pojo_Page_Format {
 		else
 			delete_post_meta( $post_id, 'pf_id' );
 	}
+
+	public function remove_format_in_elementor_mode( $check, $object_id, $meta_key, $meta_value, $prev_value ) {
+		if ( '_elementor_edit_mode' === $meta_key && 'builder' === $meta_value ) {
+			delete_post_meta( $object_id, 'pf_id' );
+		}
+
+		return $check;
+	}
 	
 	public function admin_head() {
 		global $post;
@@ -219,7 +229,16 @@ class Pojo_Page_Format {
 				$format = $this->_default_id;
 			
 			if ( isset( $formats[ $format ] ) ) {
-				$display[] = sprintf( '<b>%s:</b> %s', __( 'Format', 'pojo' ), $formats[ $format ]['title'] );
+				$format_title = $formats[ $format ]['title'];
+				
+				if ( 'text' === $format && Pojo_Compatibility::is_elementor_installed() ) {
+					$edit_mode = get_post_meta( $post->ID, '_elementor_edit_mode', true );
+					
+					if ( 'builder' === $edit_mode ) {
+						$format_title = __( 'Elementor', 'pojo' );
+					}
+				}
+				$display[] = sprintf( '<b>%s:</b> %s', __( 'Format', 'pojo' ), $format_title );
 			}
 			
 			$page_layout = atmb_get_field( 'po_layout', $post->ID );
@@ -523,10 +542,11 @@ class Pojo_Page_Format {
 		
 		// Make sure all metaboxes are loaded.
 		add_action( 'save_post', array( &$this, 'get_formats' ), 1 );
-		
+
 		add_action( 'admin_enqueue_scripts', array( &$this, 'admin_enqueue_scripts' ), 101 );
 		add_action( 'edit_form_after_title', array( &$this, 'edit_form_after_title' ), 5 );
 		add_action( 'save_post', array( &$this, 'save_post' ), 50 );
+		add_action( 'update_post_metadata', array( &$this, 'remove_format_in_elementor_mode' ), 50, 5 );
 
 		add_action( 'admin_head-post.php', array( &$this, 'admin_head' ) );
 		add_action( 'admin_head-post-new.php', array( &$this, 'admin_head' ) );

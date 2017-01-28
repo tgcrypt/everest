@@ -87,7 +87,7 @@ class Pojo_Settings_Page_General extends Pojo_Settings_Page_Base {
 			'id'      => 'txt_copyright_right',
 			'title'   => __( 'Text Field 1', 'pojo' ),
 			'classes' => array( 'large-text' ),
-			'std'     => sprintf( __( 'We <i class="fa fa-heart"></i> <a href="%s">WordPress</a>', 'pojo' ), 'http://wordpress.org/' ),
+			'std'     => sprintf( __( 'Design by <a href="%s" rel="nofollow">Elementor</a>', 'pojo' ), 'https://elementor.com/' ),
 		);
 
 		$fields[] = array(

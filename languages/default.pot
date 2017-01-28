@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: everest 3.5.2\n"
+"Project-Id-Version: everest 4.0.1\n"
 "Report-Msgid-Bugs-To: team@pojo.me\n"
-"POT-Creation-Date: 2016-04-14 12:56+0300\n"
+"POT-Creation-Date: 2016-12-20 18:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,7 +79,7 @@ msgstr ""
 
 #: ../comments.php:80
 #: ../core/addons/system-info/classes/class-pojo-info-theme.php:17
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:35
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:35
 #: ../core/page-builder/templates/types/type-local.php:350
 msgid "Name"
 msgstr ""
@@ -137,15 +137,15 @@ msgstr ""
 
 #: ../content/recent_post-grid_four.php:19
 #: ../content/recent_post-grid_three.php:19 ../content/recent_post.php:19
-#: ../core/smart-page/api.php:363
+#: ../core/smart-page/api.php:366
 msgid "Read More &raquo;"
 msgstr ""
 
-#: ../core/addons/advanced-widget-title/class-pojo-advanced-widget-title.php:39
+#: ../core/addons/advanced-widget-title/class-widget-title.php:39
 msgid "Title Link:"
 msgstr ""
 
-#: ../core/addons/advanced-widget-title/class-pojo-advanced-widget-title.php:48
+#: ../core/addons/advanced-widget-title/class-widget-title.php:48
 msgid "Sub Title:"
 msgstr ""
 
@@ -321,11 +321,11 @@ msgstr ""
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:234
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:83
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-cpt.php:84
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:36
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:42
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:42
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:48
 #: ../core/page-builder/templates/types/type-local.php:352
-#: ../core/page-format/page-format.php:341
-#: ../core/page-format/page-format.php:385
+#: ../core/page-format/page-format.php:360
+#: ../core/page-format/page-format.php:404
 #: ../core/page-options/page-options.php:450
 #: ../core/settings/pages/content.php:155
 #: ../core/settings/pages/content.php:261
@@ -364,16 +364,16 @@ msgstr ""
 #: ../core/page-builder/widgets/class-pojo-widget-title.php:10
 #: ../core/page-builder/widgets/class-pojo-widget-title.php:102
 #: ../core/page-builder/widgets/class-pojo-widget-title.php:117
-#: ../core/page-format/page-format.php:284
-#: ../core/page-format/page-format.php:323
-#: ../core/page-format/page-format.php:388
-#: ../core/page-format/page-format.php:400
-#: ../core/page-format/page-format.php:412
-#: ../core/page-format/page-format.php:424
-#: ../core/page-format/page-format.php:442
-#: ../core/page-format/page-format.php:456
-#: ../core/page-format/page-format.php:474
-#: ../core/page-format/page-format.php:487
+#: ../core/page-format/page-format.php:303
+#: ../core/page-format/page-format.php:342
+#: ../core/page-format/page-format.php:407
+#: ../core/page-format/page-format.php:419
+#: ../core/page-format/page-format.php:431
+#: ../core/page-format/page-format.php:443
+#: ../core/page-format/page-format.php:461
+#: ../core/page-format/page-format.php:475
+#: ../core/page-format/page-format.php:493
+#: ../core/page-format/page-format.php:506
 #: ../core/page-options/page-options.php:38
 #: ../core/page-options/page-options.php:50
 #: ../core/page-options/page-options.php:63
@@ -403,7 +403,7 @@ msgid "Default"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:185
-#: ../core/page-format/page-format.php:301
+#: ../core/page-format/page-format.php:320
 msgid "Select Content Layout"
 msgstr ""
 
@@ -422,13 +422,13 @@ msgstr ""
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:52
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:64
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-cpt.php:261
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:63
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:63
 #: ../core/page-builder/page-builder.php:315
-#: ../core/page-format/page-format.php:389
-#: ../core/page-format/page-format.php:401
-#: ../core/page-format/page-format.php:413
-#: ../core/page-format/page-format.php:425
-#: ../core/page-format/page-format.php:475
+#: ../core/page-format/page-format.php:408
+#: ../core/page-format/page-format.php:420
+#: ../core/page-format/page-format.php:432
+#: ../core/page-format/page-format.php:444
+#: ../core/page-format/page-format.php:494
 #: ../core/page-options/page-options.php:40
 #: ../core/page-options/page-options.php:52
 #: ../core/page-options/page-options.php:65
@@ -480,14 +480,14 @@ msgstr ""
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:53
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:65
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-cpt.php:260
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:62
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:62
 #: ../core/menus/menus.php:86 ../core/page-builder/page-builder.php:314
-#: ../core/page-format/page-format.php:390
-#: ../core/page-format/page-format.php:402
-#: ../core/page-format/page-format.php:414
-#: ../core/page-format/page-format.php:426
+#: ../core/page-format/page-format.php:409
+#: ../core/page-format/page-format.php:421
+#: ../core/page-format/page-format.php:433
 #: ../core/page-format/page-format.php:445
-#: ../core/page-format/page-format.php:476
+#: ../core/page-format/page-format.php:464
+#: ../core/page-format/page-format.php:495
 #: ../core/page-options/page-options.php:39
 #: ../core/page-options/page-options.php:51
 #: ../core/page-options/page-options.php:64
@@ -505,7 +505,7 @@ msgstr ""
 #: ../core/settings/pages/content.php:287
 #: ../core/settings/pages/content.php:298
 #: ../core/settings/pages/content.php:310
-#: ../core/settings/pages/content.php:329 ../core/smart-page/api.php:433
+#: ../core/settings/pages/content.php:329 ../core/smart-page/api.php:436
 #: ../core/widgets/class-pojo-widget-posts-group.php:63
 #: ../core/widgets/class-pojo-widget-posts-group.php:75
 #: ../core/widgets/class-pojo-widget-posts-group.php:87
@@ -535,8 +535,8 @@ msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:206
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:270
-#: ../core/page-format/page-format.php:313
-#: ../core/page-format/page-format.php:511
+#: ../core/page-format/page-format.php:332
+#: ../core/page-format/page-format.php:530
 msgid "Advanced Settings"
 msgstr ""
 
@@ -547,9 +547,9 @@ msgstr ""
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:217
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:119
 #: ../core/page-builder/widgets/class-pojo-widget-title.php:143
-#: ../core/page-format/page-format.php:324
-#: ../core/page-format/page-format.php:457
-#: ../core/page-format/page-format.php:488
+#: ../core/page-format/page-format.php:343
+#: ../core/page-format/page-format.php:476
+#: ../core/page-format/page-format.php:507
 #: ../core/widgets/class-pojo-widget-animated-numbers.php:290
 #: ../core/widgets/class-pojo-widget-image-text.php:264
 #: ../core/widgets/class-pojo-widget-posts-group.php:171
@@ -564,14 +564,14 @@ msgid "Number Galleries"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:231
-#: ../core/page-format/page-format.php:338
+#: ../core/page-format/page-format.php:357
 msgid "Order By"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:235
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:84
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:43
-#: ../core/page-format/page-format.php:342
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:49
+#: ../core/page-format/page-format.php:361
 #: ../core/widgets/class-pojo-widget-posts-group.php:333
 #: ../core/widgets/class-pojo-widget-recent-posts.php:80
 msgid "Menu Order"
@@ -581,10 +581,10 @@ msgstr ""
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:85
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-cpt.php:256
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-cpt.php:352
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:44
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:50
 #: ../core/page-builder/templates/types/type-local.php:372
 #: ../core/page-builder/widgets/class-pojo-widget-title.php:150
-#: ../core/page-format/page-format.php:343
+#: ../core/page-format/page-format.php:362
 #: ../core/widgets/class-pojo-widget-posts-group.php:334
 #: ../core/widgets/class-pojo-widget-recent-posts.php:81
 #: ../core/widgets/class-pojo-widget-tabs.php:31
@@ -594,50 +594,50 @@ msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:237
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:91
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:37
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:50
-#: ../core/page-format/page-format.php:344
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:43
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:56
+#: ../core/page-format/page-format.php:363
 #: ../core/widgets/class-pojo-widget-posts-group.php:340
 #: ../core/widgets/class-pojo-widget-recent-posts.php:87
 msgid "Random"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:244
-#: ../core/page-format/page-format.php:351
+#: ../core/page-format/page-format.php:370
 msgid "Order"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:247
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:51
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:49
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:63
-#: ../core/page-format/page-format.php:354
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:51
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:55
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:69
+#: ../core/page-format/page-format.php:373
 msgid "DESC"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:248
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:50
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:48
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:62
-#: ../core/page-format/page-format.php:355
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:50
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:54
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:68
+#: ../core/page-format/page-format.php:374
 msgid "ASC"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:255
-#: ../core/page-format/page-format.php:362
+#: ../core/page-format/page-format.php:381
 msgid "Offset"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:257
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:114
-#: ../core/page-format/page-format.php:364
+#: ../core/page-format/page-format.php:383
 #: ../core/widgets/class-pojo-widget-posts-group.php:363
 #: ../core/widgets/class-pojo-widget-recent-posts.php:110
 msgid "Number of post to displace or pass over"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-gallery-cpt.php:262
-#: ../core/page-format/page-format.php:369
+#: ../core/page-format/page-format.php:388
 #: ../core/settings/pages/content.php:251
 msgid "Pagination"
 msgstr ""
@@ -678,8 +678,8 @@ msgstr ""
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:92
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-cpt.php:221
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-cpt.php:250
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:38
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:51
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:38
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:57
 #: ../core/page-builder/page-builder.php:273
 #: ../core/page-builder/widgets/class-pojo-widget-divider.php:65
 #: ../core/page-builder/widgets/class-pojo-widget-title.php:57
@@ -894,9 +894,9 @@ msgstr ""
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:14
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:48
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-widget.php:16
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:11
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:11
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:11
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:11
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:17
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:17
 #: ../core/page-builder/widgets/class-pojo-widget-rev-slider.php:14
 #: ../core/page-builder/widgets/class-pojo-widget-sidebar.php:24
 #: ../core/page-builder/widgets/class-pojo-widget-title.php:23
@@ -940,7 +940,7 @@ msgid "Style:"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:33
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:17
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:23
 msgid "Category:"
 msgstr ""
 
@@ -971,9 +971,9 @@ msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:86
 #: ../core/addons/system-info/classes/class-pojo-info-theme.php:19
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:45
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:51
 #: ../core/page-builder/templates/types/type-local.php:353
-#: ../core/page-format/page-format.php:421
+#: ../core/page-format/page-format.php:440
 #: ../core/page-options/page-options.php:453
 #: ../core/settings/pages/content.php:188
 #: ../core/settings/pages/content.php:294
@@ -983,28 +983,28 @@ msgid "Author"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:87
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:46
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:52
 #: ../core/widgets/class-pojo-widget-posts-group.php:336
 #: ../core/widgets/class-pojo-widget-recent-posts.php:83
 msgid "Post Slug"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:88
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:47
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:53
 #: ../core/widgets/class-pojo-widget-posts-group.php:337
 #: ../core/widgets/class-pojo-widget-recent-posts.php:84
 msgid "Modified"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:89
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:48
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:54
 #: ../core/widgets/class-pojo-widget-posts-group.php:338
 #: ../core/widgets/class-pojo-widget-recent-posts.php:85
 msgid "Comment Count"
 msgstr ""
 
 #: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:90
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:49
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:55
 #: ../core/widgets/class-pojo-widget-posts-group.php:339
 #: ../core/widgets/class-pojo-widget-recent-posts.php:86
 msgid "Post ID"
@@ -1042,12 +1042,8 @@ msgstr ""
 msgid "Display latest galleries by category"
 msgstr ""
 
-#: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:181
+#: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:180
 msgid "No found posts."
-msgstr ""
-
-#: ../core/addons/galleries/classes/class-pojo-widget-recent-galleries.php:184
-msgid "Galleries not found. Please select a category."
 msgstr ""
 
 #: ../core/addons/login-screen/class-pojo-login-style.php:28
@@ -1254,17 +1250,17 @@ msgid "Add Search Button"
 msgstr ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:198
-#: ../core/addons/plugins/plugin-activation.php:157
+#: ../core/addons/plugins/plugin-activation.php:144
 msgid "Install Required Plugins"
 msgstr ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:199
-#: ../core/addons/plugins/plugin-activation.php:158
+#: ../core/addons/plugins/plugin-activation.php:145
 msgid "Install Plugins"
 msgstr ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:200
-#: ../core/addons/plugins/plugin-activation.php:159
+#: ../core/addons/plugins/plugin-activation.php:146
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
@@ -1274,7 +1270,7 @@ msgid "Something went wrong."
 msgstr ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:202
-#: ../core/addons/plugins/plugin-activation.php:161
+#: ../core/addons/plugins/plugin-activation.php:148
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
@@ -1282,7 +1278,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:203
-#: ../core/addons/plugins/plugin-activation.php:162
+#: ../core/addons/plugins/plugin-activation.php:149
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
@@ -1290,7 +1286,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:204
-#: ../core/addons/plugins/plugin-activation.php:163
+#: ../core/addons/plugins/plugin-activation.php:150
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
@@ -1304,7 +1300,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:205
-#: ../core/addons/plugins/plugin-activation.php:164
+#: ../core/addons/plugins/plugin-activation.php:151
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
@@ -1312,7 +1308,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:206
-#: ../core/addons/plugins/plugin-activation.php:165
+#: ../core/addons/plugins/plugin-activation.php:152
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
@@ -1320,7 +1316,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:207
-#: ../core/addons/plugins/plugin-activation.php:166
+#: ../core/addons/plugins/plugin-activation.php:153
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
@@ -1334,7 +1330,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:208
-#: ../core/addons/plugins/plugin-activation.php:167
+#: ../core/addons/plugins/plugin-activation.php:154
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -1346,7 +1342,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:209
-#: ../core/addons/plugins/plugin-activation.php:168
+#: ../core/addons/plugins/plugin-activation.php:155
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -1360,7 +1356,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:210
-#: ../core/addons/plugins/plugin-activation.php:169
+#: ../core/addons/plugins/plugin-activation.php:156
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
@@ -1373,14 +1369,14 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:212
-#: ../core/addons/plugins/plugin-activation.php:170
+#: ../core/addons/plugins/plugin-activation.php:157
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:213
-#: ../core/addons/plugins/plugin-activation.php:171
+#: ../core/addons/plugins/plugin-activation.php:158
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
@@ -1390,13 +1386,13 @@ msgstr ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:215
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:2029
-#: ../core/addons/plugins/plugin-activation.php:172
+#: ../core/addons/plugins/plugin-activation.php:159
 msgid "Plugin activated successfully."
 msgstr ""
 
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:216
 #: ../core/addons/plugins/class-tgm-plugin-activation.php:1719
-#: ../core/addons/plugins/plugin-activation.php:173
+#: ../core/addons/plugins/plugin-activation.php:160
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
@@ -1592,11 +1588,11 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: ../core/addons/plugins/plugin-activation.php:160
+#: ../core/addons/plugins/plugin-activation.php:147
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: ../core/addons/plugins/plugin-activation.php:174
+#: ../core/addons/plugins/plugin-activation.php:161
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
@@ -1768,6 +1764,7 @@ msgstr ""
 
 #: ../core/addons/scroll-up/scroll-up.php:36
 #: ../core/addons/scroll-up/scroll-up.php:191
+#: ../core/settings/pages/content.php:362
 msgid "Disable"
 msgstr ""
 
@@ -1882,7 +1879,7 @@ msgid "Add New Slideshow"
 msgstr ""
 
 #: ../core/addons/slideshow/classes/class-pojo-slideshow-cpt.php:21
-#: ../core/addons/slideshow/classes/class-pojo-slideshow-shortcode.php:34
+#: ../core/addons/slideshow/classes/class-pojo-slideshow-shortcode.php:33
 msgid "Edit Slideshow"
 msgstr ""
 
@@ -2357,146 +2354,146 @@ msgstr ""
 msgid "By %s"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/class-pojo-woocommerce-integration.php:50
+#: ../core/addons/wc-integration/class-pojo-wc-integration.php:59
 msgid "Add WooCommerce Cart in Primary Menu"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/class-pojo-woocommerce-integration.php:57
+#: ../core/addons/wc-integration/class-pojo-wc-integration.php:66
 msgid "Add WooCommerce Cart in Sticky Menu"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/class-pojo-woocommerce-integration.php:68
+#: ../core/addons/wc-integration/class-pojo-wc-integration.php:77
 msgid "WooCommerce"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/class-pojo-woocommerce-integration.php:78
+#: ../core/addons/wc-integration/class-pojo-wc-integration.php:87
 msgid "View your shopping cart"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/class-pojo-woocommerce-integration.php:79
+#: ../core/addons/wc-integration/class-pojo-wc-integration.php:88
 msgid "Start shopping"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/class-pojo-woocommerce-integration.php:84
+#: ../core/addons/wc-integration/class-pojo-wc-integration.php:93
 #, php-format
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../core/addons/woocommerce-integration/class-pojo-woocommerce-integration.php:125
+#: ../core/addons/wc-integration/class-pojo-wc-integration.php:134
 msgid "View Cart"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/class-pojo-woocommerce-integration.php:126
+#: ../core/addons/wc-integration/class-pojo-wc-integration.php:135
 msgid "Checkout"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:17
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:17
 #: ../core/widgets/class-pojo-widget-animated-numbers.php:11
 msgid "Number:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:19
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:19
 msgid "The `number` field is used to display the number of products."
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:24
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:24
 msgid "IDs:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:26
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:26
 msgid "The `ids` field is to tell the widget which categories to display."
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:31
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:32
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:38
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:31
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:38
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:44
 msgid "Order by:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:36
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:36
 msgid "Slug"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:37
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:37
 msgctxt "count of WC products"
 msgid "Count"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:39
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:39
 msgid "ID"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:46
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:44
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:58
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:46
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:50
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:64
 msgctxt "Sorting order"
 msgid "Order"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:58
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:58
 msgid "Hide Empty:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:70
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:56
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:70
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:70
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:62
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:76
 msgid "Columns:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:77
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:77
 msgid "Child of:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:79
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:79
 msgid ""
 "Set the parent paramater to 0 to only display top level categories. Set ids "
 "to a comma separated list of category ids to only show those."
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:84
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-product-categories.php:85
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:84
+#: ../core/addons/wc-integration/widgets/class-wc-product-categories.php:85
 msgid "Product Categories"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:25
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:31
 #: ../core/widgets/class-pojo-widget-posts-group.php:37
 #: ../core/widgets/class-pojo-widget-recent-posts.php:37
 msgid "Number Posts:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:63
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products-category.php:64
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:69
+#: ../core/addons/wc-integration/widgets/class-wc-products-category.php:70
 msgid "Products by Category"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:17
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:23
 msgid "Number Products:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:24
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:30
 msgid "Show:"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:28
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:34
 msgid "All Products"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:29
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:35
 msgid "Featured Products"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:30
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:36
 msgid "On-sale Products"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:31
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:37
 msgid "Top Rated Products"
 msgstr ""
 
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:77
-#: ../core/addons/woocommerce-integration/widgets/class-pojo-widget-wc-products.php:78
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:83
+#: ../core/addons/wc-integration/widgets/class-wc-products.php:84
 msgid "Recent Products"
 msgstr ""
 
@@ -2505,7 +2502,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: ../core/bootstrap.php:252 ../core/bootstrap.php:263
+#: ../core/bootstrap.php:254 ../core/bootstrap.php:265
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
@@ -2538,7 +2535,7 @@ msgid "Select 404 Page Content"
 msgstr ""
 
 #: ../core/customize/class-pojo-customizer-sections.php:78
-#: ../core/page-format/page-format.php:231
+#: ../core/page-format/page-format.php:250
 #: ../core/page-options/page-options.php:408
 msgid "Layout"
 msgstr ""
@@ -2636,15 +2633,15 @@ msgstr ""
 msgid "Letter Spacing"
 msgstr ""
 
-#: ../core/enqueue-scripts.php:146
+#: ../core/enqueue-scripts.php:149
 msgid "Do you want remove the Widget?"
 msgstr ""
 
-#: ../core/enqueue-scripts.php:147
+#: ../core/enqueue-scripts.php:150
 msgid "Do you want remove the Row?"
 msgstr ""
 
-#: ../core/enqueue-scripts.php:148
+#: ../core/enqueue-scripts.php:151
 msgid "Do you want remove this template?"
 msgstr ""
 
@@ -2718,12 +2715,6 @@ msgstr ""
 
 #: ../core/helpers/class-pojo-templates.php:169
 msgid "Loading"
-msgstr ""
-
-#: ../core/helpers/feedback/class-pojo-feedback.php:12
-msgid ""
-"Want to improve your Pojo theme? Rate our new Forms feature so we know "
-"what's important to you."
 msgstr ""
 
 #: ../core/helpers/feedback/class-pojo-feedback.php:55
@@ -3607,93 +3598,97 @@ msgstr ""
 msgid "Editor"
 msgstr ""
 
-#: ../core/page-format/page-format.php:68
+#: ../core/page-format/page-format.php:69
 msgid "Builder"
 msgstr ""
 
-#: ../core/page-format/page-format.php:93
+#: ../core/page-format/page-format.php:95
 msgid "Page Format"
 msgstr ""
 
-#: ../core/page-format/page-format.php:222
+#: ../core/page-format/page-format.php:238
+msgid "Elementor"
+msgstr ""
+
+#: ../core/page-format/page-format.php:241
 msgid "Format"
 msgstr ""
 
-#: ../core/page-format/page-format.php:266
+#: ../core/page-format/page-format.php:285
 msgid "Select Taxonomy"
 msgstr ""
 
-#: ../core/page-format/page-format.php:303
+#: ../core/page-format/page-format.php:322
 msgid "Blog with thumbnail (List) or Gallery with columns (Grid)"
 msgstr ""
 
-#: ../core/page-format/page-format.php:319
+#: ../core/page-format/page-format.php:338
 msgid "Posts Per Page"
 msgstr ""
 
-#: ../core/page-format/page-format.php:331
+#: ../core/page-format/page-format.php:350
 msgid "Number Posts"
 msgstr ""
 
-#: ../core/page-format/page-format.php:377
+#: ../core/page-format/page-format.php:396
 msgid "Meta Data"
 msgstr ""
 
-#: ../core/page-format/page-format.php:397
+#: ../core/page-format/page-format.php:416
 #: ../core/page-options/page-options.php:451
 #: ../core/settings/pages/content.php:166
 #: ../core/settings/pages/content.php:272
 msgid "Time"
 msgstr ""
 
-#: ../core/page-format/page-format.php:409
+#: ../core/page-format/page-format.php:428
 #: ../core/page-options/page-options.php:452
 #: ../core/settings/pages/content.php:177
 #: ../core/settings/pages/content.php:283
 msgid "Comments"
 msgstr ""
 
-#: ../core/page-format/page-format.php:433
+#: ../core/page-format/page-format.php:452
 msgid "Content Post"
 msgstr ""
 
-#: ../core/page-format/page-format.php:439
+#: ../core/page-format/page-format.php:458
 #: ../core/settings/pages/content.php:305
-#: ../core/settings/pages/content.php:356
+#: ../core/settings/pages/content.php:382
 msgid "Content"
 msgstr ""
 
-#: ../core/page-format/page-format.php:443
+#: ../core/page-format/page-format.php:462
 #: ../core/settings/pages/content.php:308
 msgid "Excerpt"
 msgstr ""
 
-#: ../core/page-format/page-format.php:444
+#: ../core/page-format/page-format.php:463
 #: ../core/settings/pages/content.php:309
 msgid "Full Content"
 msgstr ""
 
-#: ../core/page-format/page-format.php:452
+#: ../core/page-format/page-format.php:471
 #: ../core/settings/pages/content.php:317
 msgid "Excerpt Length (Words)"
 msgstr ""
 
-#: ../core/page-format/page-format.php:464
+#: ../core/page-format/page-format.php:483
 msgid "Number Words"
 msgstr ""
 
-#: ../core/page-format/page-format.php:471
+#: ../core/page-format/page-format.php:490
 #: ../core/settings/pages/content.php:325 ../core/smart-page/api.php:205
 msgid "Read More"
 msgstr ""
 
-#: ../core/page-format/page-format.php:483
-#: ../core/page-format/page-format.php:495
+#: ../core/page-format/page-format.php:502
+#: ../core/page-format/page-format.php:514
 #: ../core/settings/pages/content.php:336
 msgid "Text Read More"
 msgstr ""
 
-#: ../core/page-format/page-format.php:504
+#: ../core/page-format/page-format.php:523
 msgid "Don't apply the page settings to the child posts"
 msgstr ""
 
@@ -3810,15 +3805,15 @@ msgstr ""
 msgid "About Author"
 msgstr ""
 
-#: ../core/page-options/page-options.php:499
+#: ../core/page-options/page-options.php:489
 msgid "Blank Page"
 msgstr ""
 
-#: ../core/page-options/page-options.php:505
+#: ../core/page-options/page-options.php:495
 msgid "Enable Blank Page"
 msgstr ""
 
-#: ../core/page-options/page-options.php:507
+#: ../core/page-options/page-options.php:497
 msgid "No Header, No Footer - Just Primary Content"
 msgstr ""
 
@@ -3858,7 +3853,32 @@ msgstr ""
 msgid "Archive:"
 msgstr ""
 
-#: ../core/settings/pages/content.php:355
+#: ../core/settings/pages/content.php:358
+msgid "Backend Editor"
+msgstr ""
+
+#: ../core/settings/pages/content.php:361
+msgid "Enable"
+msgstr ""
+
+#: ../core/settings/pages/content.php:365
+msgid ""
+"Keep this setting on Disable, so you can use the Elementor frontend editor "
+"and not the backend one."
+msgstr ""
+
+#: ../core/settings/pages/content.php:371
+msgid "Backend Builder (old version)"
+msgstr ""
+
+#: ../core/settings/pages/content.php:372
+msgid ""
+"This control will let you switch off the backend editor of the theme, so "
+"page design will be done on Elementor, the more advanced frontend page "
+"builder."
+msgstr ""
+
+#: ../core/settings/pages/content.php:381
 msgid "Content Settings"
 msgstr ""
 
@@ -3938,7 +3958,7 @@ msgstr ""
 
 #: ../core/settings/pages/general.php:90
 #, php-format
-msgid "We <i class=\"fa fa-heart\"></i> <a href=\"%s\">WordPress</a>"
+msgid "Design by <a href=\"%s\" rel=\"nofollow\">Elementor</a>"
 msgstr ""
 
 #: ../core/settings/pages/general.php:95
@@ -4275,11 +4295,11 @@ msgstr ""
 msgid "Sidebars"
 msgstr ""
 
-#: ../core/smart-page/api.php:426
+#: ../core/smart-page/api.php:429
 msgid "Numbers"
 msgstr ""
 
-#: ../core/smart-page/api.php:430
+#: ../core/smart-page/api.php:433
 msgid "Infinite Scroll"
 msgstr ""
 
@@ -5102,15 +5122,15 @@ msgstr ""
 msgid "Pojo"
 msgstr ""
 
-#: ../loop/404.php:14
+#: ../loop/404.php:29
 msgid "404"
 msgstr ""
 
-#: ../loop/404.php:15
+#: ../loop/404.php:30
 msgid "Not Found"
 msgstr ""
 
-#: ../loop/404.php:16
+#: ../loop/404.php:31
 msgid "Sorry, this page could not be found!"
 msgstr ""
 

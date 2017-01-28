@@ -272,7 +272,6 @@ class Pojo_Settings_Page_Tools {
 		}
 		
 		global $wpdb;
-		//_wp_page_template
 		$wpdb->delete(
 			$wpdb->postmeta,
 			array(

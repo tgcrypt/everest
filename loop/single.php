@@ -15,13 +15,13 @@ if ( have_posts() ) :
 				<?php endif; ?>
 				<?php if ( pojo_is_show_page_title() ) : ?>
 					<div class="page-title">
-						<h1><?php the_title(); ?></h1>
+						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</div>
 				<?php endif; ?>
 			</header>
 			<div class="entry-meta">
 				<?php if ( po_single_metadata_show( 'date' ) ) : ?>
-					<span class="entry-date"><?php echo get_the_date(); ?></span>
+					<span><time datetime="<?php the_time('o-m-d'); ?>" class="entry-date date published updated"><?php echo get_the_date(); ?></time></span>
 				<?php endif; ?>
 				<?php if ( po_single_metadata_show( 'time' ) ) : ?>
 					<span class="entry-time"><?php echo get_the_time(); ?></span>
@@ -30,7 +30,7 @@ if ( have_posts() ) :
 					<span class="entry-comment"><?php comments_popup_link( __( 'No Comments', 'pojo' ), __( 'One Comment', 'pojo' ), __( '% Comments', 'pojo' ), 'comments' ); ?></span>
 				<?php endif; ?>
 				<?php if ( po_single_metadata_show( 'author' ) ) : ?>
-					<span class="entry-user"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></span>
+					<span class="entry-user vcard author"><a class="fn" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php echo get_the_author(); ?></a></span>
 				<?php endif; ?>
 			</div>
 			<div class="entry-content">

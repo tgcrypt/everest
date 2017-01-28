@@ -1,5 +1,49 @@
 # Everest - WordPress Theme by Pojo.me
 
+### 2016-12-20 v4.0.1
+	* Tweak! - Updated jQuery Numerator Plugin v0.2.1
+	* Tweak! - Updated Revolution Slider v5.3.1.5
+	* Tweak! - Added `po_single_metadata_show` filter
+	* Fix! - Two Slideshows in one page (with same source)
+
+### 2016-11-14 v4.0.0
+	* Tweak! - Added HTTPS link to google fonts script
+	* Tweak! - Reorder loading scripts in Child Theme
+	* Tweak! - Added menu anchor support for Elementor
+	* Tweak! - New demos for all pojo themes, designed by Elementor
+	* Tweak! - Elementor now is primary page builder for Pojo themes
+	* Tweak! - Updated Revolution Slider v5.3.0.2
+	* Tweak! - Updated Isotope plugin v3.0.1
+	* Tweak! - Removed Device Widget, Sharing, Builder Animations plugins from Install Required Plugins
+	* Tweak! - Added OptinMonster to Install Required Plugins
+	* Fix! - Added subset support for Google Fonts
+	* Fix! - Removed margin bottom in post format gallery
+	* Fix! - Reduced file-name for Open Sans Condensed font
+
+### 2016-09-20 v3.6.4
+	* Tweak! - Added integration with Elementor for: Slideshow, Galleries, WooCommerce and Revolution Slider
+    * Tweak! - Added `schema.org` support for post archive and single
+
+### 2016-08-17 v3.6.3
+	* Tweak! - Google Fonts list updated
+	* Tweak! - Short filename for some files
+	* Tweak! - Compatible up to WordPress v4.6
+	* Fixed! - Bug TinyMCE in page builder
+
+### 2016-07-17 v3.6.2
+	* Tweak! - Updated Revolution Slider v5.2.6
+	* Tweak! - Updated Font Awesome v4.6.3
+	* Fixed! - Bootstrap collapse bug
+
+### 2016-06-02 v3.6.1
+	* Tweak! - New 10 google fonts for Hebrew
+	* Tweak! - Fully support WooCommerce v2.6.1
+
+### 2016-06-02 v3.6.0
+	* New! - Elementor support 
+	* New! - Added blank page to all CPTs
+	* Tweak! - Updated Revolution Slider v5.2.5.3
+
 ### 2016-04-14 v3.5.2
 	* Fixed! - Issue Login screnn style with WP 4.5
 

@@ -8,7 +8,7 @@ if ( ! defined( 'POJO_VER_BOOTSTRAP' ) )
 	define( 'POJO_VER_BOOTSTRAP', '3.0.0' );
 
 if ( ! defined( 'POJO_VER_FONT_AWESOME' ) )
-	define( 'POJO_VER_FONT_AWESOME', '4.6.1' );
+	define( 'POJO_VER_FONT_AWESOME', '4.7.0' );
 
 if ( ! defined( 'POST_EXCERPT_LENGTH' ) )
 	define( 'POST_EXCERPT_LENGTH', 40 );

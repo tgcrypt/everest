@@ -93,7 +93,8 @@
 					navBarCollapse: '.navbar-collapse'
 				},
 				classes: {
-					anchor: 'pojo-menu-anchor',
+					pojoAnchor: 'pojo-menu-anchor',
+					elementorAnchor: 'elementor-menu-anchor',
 					adminBar: 'admin-bar',
 					current: 'active current-menu-item current-menu-ancestor'
 				},
@@ -128,6 +129,8 @@
 		 */
 		var initElementsCache = function() {
 			elementsCache = getDefaultElements();
+
+			elementsCache.$navBarCollapse.collapse( { toggle: false } ); // Fixed Bootstrap bug
 		};
 
 		/**
@@ -207,7 +210,7 @@
 			}
 
 			var $anchor = $( currentAnchorID );
-			if ( ! $anchor.length || ! $anchor.hasClass( settings.classes.anchor ) ) {
+			if ( ! $anchor.length || ! ( $anchor.hasClass( settings.classes.pojoAnchor ) || $anchor.hasClass( settings.classes.elementorAnchor ) ) ) {
 				return false;
 			}
 			return $anchor;

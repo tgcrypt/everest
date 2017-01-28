@@ -23,7 +23,7 @@ global $_pojo_parent_id;
 		<?php endif; ?>
 
 		<div class="caption">
-			<h4 class="grid-heading">
+			<h4 class="grid-heading entry-title">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h4>
 
@@ -31,7 +31,7 @@ global $_pojo_parent_id;
 
 			<div class="entry-meta">
 				<?php if ( po_archive_metadata_show( 'date', $_pojo_parent_id ) ) : ?>
-					<span class="entry-date"><?php echo get_the_date(); ?></span>
+					<span><time datetime="<?php the_time('o-m-d'); ?>" class="entry-date date published updated"><?php echo get_the_date(); ?></time></span>
 				<?php endif; ?>
 				<?php if ( po_archive_metadata_show( 'time', $_pojo_parent_id ) ) : ?>
 					<span class="entry-time"><?php echo get_the_time(); ?></span>
@@ -40,7 +40,7 @@ global $_pojo_parent_id;
 					<span class="entry-comment"><?php comments_popup_link( __( 'No Comments', 'pojo' ), __( 'One Comment', 'pojo' ), __( '% Comments', 'pojo' ), 'comments' ); ?></span>
 				<?php endif; ?>
 				<?php if ( po_archive_metadata_show( 'author', $_pojo_parent_id ) ) : ?>
-					<span class="entry-user"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></span>
+					<span class="entry-user vcard author"><a class="fn" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php echo get_the_author(); ?></a></span>
 				<?php endif; ?>
 			</div>
 		</div>

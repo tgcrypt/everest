@@ -162,7 +162,9 @@ var Pojo_Admin_Main = ( function( $, window, document, undefined ) {
 
 					setTimeout( function() {
 						var textarea = $( '#' + last_element_id );
-						if ( textarea.is( ':visible' ) ) {
+						var isHTMLMode = ( typeof tinyMCE !== 'undefined' ) && tinyMCE.activeEditor && ! tinyMCE.activeEditor.isHidden();
+						//if ( textarea.is( ':visible' ) ) {
+						if ( ! isHTMLMode ) {
 							textarea.val( textarea_editor.val() );
 						} else {
 							tinyMCE.activeEditor.setContent( textarea_editor.val() );

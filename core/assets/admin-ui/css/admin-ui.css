@@ -1,4 +1,4 @@
-/*! everest - v3.5.2 - 14-04-2016 */
+/*! everest - v4.0.1 - 20-12-2016 */
 @font-face {
   font-family: 'picon';
   src: url('../../fonts/picon/picon?0.7.eot');
@@ -445,6 +445,9 @@ ul.at-image-ul-wrap li:hover .image-delete {
 #pojo-page-format h2 {
   padding: 0;
   margin: 20px 0;
+}
+body.elementor-editor-active #pojo-page-format {
+  display: none;
 }
 .rtl .settings_panel,
 .rtl .view_wrapper,

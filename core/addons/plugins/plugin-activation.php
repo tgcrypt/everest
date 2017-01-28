@@ -22,6 +22,15 @@ class Pojo_Plugin_Activation {
 	public function register_plugins() {
 		$plugins = array(
 
+			// Elementor
+			array(
+				'name' => 'Elementor', // The plugin name
+				'slug' => 'elementor',
+				'required' => false, // If false, the plugin is only 'recommended' instead of required
+				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			),
+
 			// Pojo Importer
 			array(
 				'name' => 'Pojo Importer', // The plugin name
@@ -37,7 +46,7 @@ class Pojo_Plugin_Activation {
 				'slug' => 'revslider',
 				'source' => 'http://pojo.me/go/revslider-plugin/', // The plugin source
 				'required' => false, // If false, the plugin is only 'recommended' instead of required
-				'version' => '5.2.4.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+				'version' => '5.3.1.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 				'external_url' => 'http://www.themepunch.com/codecanyon/revolution_wp/',
@@ -61,22 +70,19 @@ class Pojo_Plugin_Activation {
 				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			),
 			
-			// Pojo Sharing
-			array(
-				'name' => 'Pojo Sharing', // The plugin name
-				'slug' => 'pojo-sharing',
-				'source' => 'http://pojo.me/go/pojo-sharing-2-5-11/', // The plugin source
-				'required' => false, // If false, the plugin is only 'recommended' instead of required
-				'version' => '2.5.11', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-				'external_url' => 'https://github.com/pojome/pojo-sharing',
-			),
-			
 			// Pojo Lightbox
 			array(
 				'name' => 'Pojo Lightbox', // The plugin name
 				'slug' => 'pojo-lightbox',
+				'required' => false, // If false, the plugin is only 'recommended' instead of required
+				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			),
+			
+			// OptinMonster
+			array(
+				'name' => 'OptinMonster', // The plugin name
+				'slug' => 'optinmonster',
 				'required' => false, // If false, the plugin is only 'recommended' instead of required
 				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
@@ -100,15 +106,6 @@ class Pojo_Plugin_Activation {
 				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			),
 			
-			// Pojo Builder Animation
-			array(
-				'name' => 'Pojo Builder Animation', // The plugin name
-				'slug' => 'pojo-builder-animation',
-				'required' => false, // If false, the plugin is only 'recommended' instead of required
-				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			),
-			
 			// Pojo News Ticker
 			array(
 				'name' => 'Pojo News Ticker', // The plugin name
@@ -126,16 +123,6 @@ class Pojo_Plugin_Activation {
 				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			),
-
-			// Pojo Device Widget
-			array(
-				'name' => 'Pojo Device Widget', // The plugin name
-				'slug' => 'aryo-widget-device',
-				'required' => false, // If false, the plugin is only 'recommended' instead of required
-				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			),
-			
 		);
 
 		/**

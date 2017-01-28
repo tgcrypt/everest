@@ -18,7 +18,7 @@ if ( ! empty( $categories_terms ) && ! is_wp_error( $categories_terms ) )
 				<img src="<?php echo $image_url; ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" class="media-object" />
 				<div class="overlay-image"></div>
 				<div class="caption overlay-title">
-					<h4 class="grid-heading">
+					<h4 class="grid-heading entry-title">
 						<?php the_title(); ?>
 						<?php if ( ! empty( $categories ) ) : ?>
 							<small><?php echo implode( ', ', $categories ); ?></small>

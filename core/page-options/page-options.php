@@ -482,25 +482,15 @@ class Pojo_Page_Options {
 				'std' => '',
 			);
 		}
-		
-		if ( ! empty( $fields ) ) {
-			$old_fields = array_merge( $fields, $old_fields );
-		}
-		
-		return $old_fields;
-	}
-	
-	public function po_init_fields_page( $old_fields ) {
-		$fields = array();
 
 		if ( current_theme_supports( 'pojo-blank-page' ) ) {
-			$old_fields[] = array(
+			$fields[] = array(
 				'id'    => 'heading_blank_page',
 				'title' => __( 'Blank Page', 'pojo' ),
 				'type'  => Pojo_MetaBox::FIELD_HEADING,
 			);
 
-			$old_fields[] = array(
+			$fields[] = array(
 				'id' => 'blank_page',
 				'title' => __( 'Enable Blank Page', 'pojo' ),
 				'type' => Pojo_MetaBox::FIELD_CHECKBOX,
@@ -512,9 +502,19 @@ class Pojo_Page_Options {
 		if ( ! empty( $fields ) ) {
 			$old_fields = array_merge( $fields, $old_fields );
 		}
-
+		
 		return $old_fields;
 	}
+	
+	/*public function po_init_fields_page( $old_fields ) {
+		$fields = array();
+		
+		if ( ! empty( $fields ) ) {
+			$old_fields = array_merge( $fields, $old_fields );
+		}
+
+		return $old_fields;
+	}*/
 
 	public function body_add_blank_page_classes( $classes ) {
 		if ( pojo_is_blank_page() ) {
@@ -526,7 +526,7 @@ class Pojo_Page_Options {
 	public function __construct() {
 		add_filter( 'pojo_meta_boxes', array( &$this, 'create_post_options_panel' ) );
 		add_filter( 'po_init_fields', array( &$this, 'po_init_fields' ), 20, 2 );
-		add_filter( 'po_init_fields-page', array( &$this, 'po_init_fields_page' ) );
+		//add_filter( 'po_init_fields-page', array( &$this, 'po_init_fields_page' ) );
 		
 		add_filter( 'body_class', array( &$this, 'body_add_blank_page_classes' ) );
 

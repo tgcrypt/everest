@@ -41,4 +41,7 @@ class Pojo_Compatibility {
 		return class_exists( 'bbPress' );
 	}
 
+	public static function is_elementor_installed() {
+		return class_exists( '\Elementor\Plugin' );
+	}
 }

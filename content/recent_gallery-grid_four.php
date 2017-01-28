@@ -28,7 +28,7 @@ endif;
 			</figure>
 		<?php endif; ?>
 		<div class="caption">
-			<h4 class="grid-heading">
+			<h4 class="grid-heading entry-title">
 				<?php if ( 'hide' !== $_current_widget_instance['show_title'] ) : ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				<?php endif; ?>

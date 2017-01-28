@@ -24,7 +24,7 @@ global $_current_widget_instance;
 		<?php endif; ?>
 		<div class="media-body">
 			<?php if ( 'show' === $_current_widget_instance['show_title'] ) : ?>
-				<h3 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<h3 class="media-heading entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 			<?php endif; ?>
 
 			<?php if ( 'show' === $_current_widget_instance['except'] ) : ?>
@@ -32,7 +32,7 @@ global $_current_widget_instance;
 			<?php endif; ?>
 			<div class="entry-meta">
 				<?php if ( 'show' === $_current_widget_instance['metadata_date'] ) : ?>
-					<span class="entry-date"><?php echo get_the_date(); ?></span>
+					<span><time datetime="<?php the_time('o-m-d'); ?>" class="entry-date date published updated"><?php echo get_the_date(); ?></time></span>
 				<?php endif; ?>
 				<?php if ( 'show' === $_current_widget_instance['metadata_time'] ) : ?>
 					<span class="entry-time"><?php echo get_the_time(); ?></span>
@@ -41,7 +41,7 @@ global $_current_widget_instance;
 					<span class="entry-comment"><?php comments_popup_link( __( 'No Comments', 'pojo' ), __( 'One Comment', 'pojo' ), __( '% Comments', 'pojo' ), 'comments' ); ?></span>
 				<?php endif; ?>
 				<?php if ( 'show' === $_current_widget_instance['metadata_author'] ) : ?>
-					<span class="entry-user"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></span>
+					<span class="entry-user vcard author"><a class="fn" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php echo get_the_author(); ?></a></span>
 				<?php endif; ?>
 			</div>
 		</div>

@@ -1,7 +1,7 @@
 /*!
  * pojo.me
  */
-/* global MasterSliderIntegration, Modernizr */
+/* global Modernizr */
 
 // Define Pojo var if not defined.
 var Pojo = Pojo || {};
@@ -77,8 +77,6 @@ Pojo.methods = ( function( $, window, document, undefined ) {
 			initBackgroundVideo();
 			
 			initScrollUp();
-
-			MasterSliderIntegration.init();
 
 			$( 'div.pojo-gallery-pager' ).bxSlider( {
 				minSlides: 5,
@@ -415,8 +413,12 @@ Pojo.methods = ( function( $, window, document, undefined ) {
 
 		initAnimatedNumbers = function() {
 			$( '.pojo-animated-numbers' ).waypoint( function() {
-				$( this ).numerator( {
-					duration: $( this ).data( 'duration' )
+				var $this = $( this ),
+					data = $this.data();
+
+				$this.numerator( {
+					duration: data.duration,
+					toValue: data.to_value
 				} );
 			}, { offset: '90%' } );
 		},

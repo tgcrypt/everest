@@ -8,7 +8,7 @@ if ( empty( $display_type ) )
 <?php if ( po_breadcrumbs_need_to_show() ) : ?>
 	<?php pojo_breadcrumbs(); ?>
 <?php endif; ?>
-<h1><?php _e( 'Archive Galleries', 'pojo' ); ?></h1>
+<h1 class="entry-title"><?php _e( 'Archive Galleries', 'pojo' ); ?></h1>
 <?php if ( have_posts() ) : ?>
 	<?php do_action( 'pojo_before_content_loop', $display_type ); ?>
 	<?php while ( have_posts() ) : the_post(); ?>

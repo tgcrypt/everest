@@ -195,7 +195,7 @@ abstract class Pojo_Widget_Base extends WP_Widget {
 			</p>
 		<?php elseif ( 'button_collapse' === $field['type'] ) : ?>
 			<?php if ( isset( $field['mode'] ) && 'start' === $field['mode'] ) : ?>
-				<a href="javascript:void(0);" class="widget-button-collapse button" data-toggle_class="collapse-<?php echo $this->get_field_id( $field['id'] ); ?>"><?php echo $field['title']; ?></a>
+				<a href="javascript:void(0);" class="pojo-widget-button-collapse widget-button-collapse button" data-toggle_class="collapse-<?php echo $this->get_field_id( $field['id'] ); ?>"><?php echo $field['title']; ?></a>
 				<div class="widget-button-collapse hidden" id="collapse-<?php echo $this->get_field_id( $field['id'] ); ?>">
 			<?php else : ?>
 				</div>

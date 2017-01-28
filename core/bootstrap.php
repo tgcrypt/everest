@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define( 'POJO_CORE_VERSION', '1.6.2' );
+define( 'POJO_CORE_VERSION', '1.7.1' );
 
 define( 'POJO_CORE_DIRECTORY', get_template_directory() . '/core' );
 define( 'POJO_INCLUDES_DIRECTORY', get_template_directory() . '/includes' );
@@ -199,7 +199,7 @@ final class Pojo_Core {
 
 		include( POJO_CORE_DIRECTORY . '/addons/menu-search/menu-search.php' );
 
-		include( POJO_CORE_DIRECTORY . '/addons/advanced-widget-title/class-pojo-advanced-widget-title.php' );
+		include( POJO_CORE_DIRECTORY . '/addons/advanced-widget-title/class-widget-title.php' );
 
 		include( POJO_CORE_DIRECTORY . '/addons/scroll-up/scroll-up.php' );
 
@@ -209,8 +209,10 @@ final class Pojo_Core {
 		include( POJO_CORE_DIRECTORY . '/addons/system-info/system-info.php' );
 
 		if ( Pojo_Compatibility::is_woocommerce_installed() ) {
-			include( POJO_CORE_DIRECTORY . '/addons/woocommerce-integration/class-pojo-woocommerce-integration.php' );
+			include( POJO_CORE_DIRECTORY . '/addons/wc-integration/class-pojo-wc-integration.php' );
 		}
+
+		include( POJO_CORE_DIRECTORY . '/addons/elementor/elementor.php' );
 	}
 
 	public function init() {

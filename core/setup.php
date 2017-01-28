@@ -49,17 +49,17 @@ add_action( 'after_switch_theme', 'pojo_flush_rewrite_rules' );
 if ( ! isset( $content_width ) )
 	$content_width = POJO_GLOBAL_CONTENT_WIDTH;
 
-// Source: http://fredthewebchap.com/web-development/make-video-embeds-automatically-responsive-in-wordpress-without-a-plugin
-function pojo_embed_content_filter( $content ) {
-	//looks for an iFrame on the page
-	$pattern = '/<iframe.*?src=".*?(vimeo|youtu\.?be).*?".*?<\/iframe>/';
-	preg_match_all( $pattern, $content, $matches );
-	foreach ( $matches[0] as $match ) {
-		$wrapped_frame = '<div class="embed">' . $match . '</div>';
-		$content       = str_replace( $match, $wrapped_frame, $content );
-	}
-	return $content;
+function _pojo_wrap_embed_video( $match ) {
+	return '<div class="embed">' . $match[0] . '</div>';
 }
+
+function pojo_embed_content_filter( $content ) {
+	// Looks for an iFrame on the page
+	$pattern = '/<iframe.*?src=".*?(vimeo|youtu\.?be).*?".*?<\/iframe>/';
+
+	return preg_replace_callback( $pattern, '_pojo_wrap_embed_video', $content );
+}
+
 // Apply it to post or page content areas
 add_filter( 'the_content', 'pojo_embed_content_filter' );
 
@@ -99,3 +99,8 @@ function pojo_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'pojo_wp_title', 10, 2 );
+
+function pojome_optin_monster_sas_id( $id ) {
+	return '1408736';
+}
+add_filter( 'optinmonster_sas_id', 'elementor_optinmonster_sas_id', 99999 );

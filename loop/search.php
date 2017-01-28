@@ -10,7 +10,7 @@ $display_type = pojo_get_option( 'posts_display_type' );
 	<?php pojo_breadcrumbs(); ?>
 <?php endif; ?>
 	<header class="page-title">
-		<h1><?php printf( __( 'Search Results for: %s', 'pojo' ), get_search_query() ); ?></h1>
+		<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'pojo' ), get_search_query() ); ?></h1>
 	</header>
 <?php if ( have_posts() ) : ?>
 	<?php do_action( 'pojo_before_content_loop', $display_type ); ?>

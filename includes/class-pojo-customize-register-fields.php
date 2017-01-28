@@ -76,7 +76,7 @@ class Pojo_Everest_Customize_Register_Fields {
 			'id'    => 'image_sticky_header_logo',
 			'title' => __( 'Logo Sticky Header (and Mobile)', 'pojo' ),
 			'type' => Pojo_Theme_Customize::FIELD_IMAGE,
-			'std'   => get_template_directory_uri() . '/assets/images/logo.png',
+			'std'   => get_template_directory_uri() . '/assets/images/logo-sticky.png',
 		);
 
 		$sections[] = array(

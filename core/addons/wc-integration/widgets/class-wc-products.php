@@ -2,6 +2,12 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Pojo_Widget_WC_Products extends Pojo_Widget_Base {
+
+	public function add_product_post_class( $classes ) {
+		$classes[] = 'product';
+
+		return $classes;
+	}
 	
 	public function __construct() {
 		$this->_form_fields = array();
@@ -85,6 +91,8 @@ class Pojo_Widget_WC_Products extends Pojo_Widget_Base {
 		
 		$instance['title'] = apply_filters( 'widget_title', $instance['title'] );
 
+		add_filter( 'post_class', array( $this, 'add_product_post_class' ) );
+
 		echo $args['before_widget'];
 
 		if ( ! empty( $instance['title'] ) )
@@ -117,7 +125,7 @@ class Pojo_Widget_WC_Products extends Pojo_Widget_Base {
 		echo do_shortcode( sprintf( '[%s %s]', $shortcode, implode( ' ', $attributes ) ) );
 		
 		echo $args['after_widget'];
+
+		remove_filter( 'post_class', array( $this, 'add_product_post_class' ) );
 	}
-
-
 }

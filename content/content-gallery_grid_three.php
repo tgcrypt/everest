@@ -26,7 +26,7 @@ if ( ! empty( $categories_terms ) && ! is_wp_error( $categories_terms ) )
 		<?php endif; ?>
 
 		<div class="caption">
-			<h4 class="grid-heading">
+			<h4 class="grid-heading entry-title">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				<?php if ( ! empty( $categories ) ) : ?>
 					<small><?php echo implode( ', ', $categories ); ?></small>

@@ -15,5 +15,4 @@ class Pojo_Customize_Control_Field_Base extends WP_Customize_Control {
 		$this->json['change_type'] = $this->change_type;
 		parent::to_json();
 	}
-
 }

@@ -428,13 +428,6 @@ img {
  * ----------------------------------------------------------------------------
  */
 
-html .mceContentBody.rtl,
-.rtl .mceContentBody{
-	direction: rtl;
-	unicode-bidi: embed;
-	float: right;
-}
-
 .rtl ol,
 .rtl ul {
 	margin-left: 0;

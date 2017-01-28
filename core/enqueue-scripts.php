@@ -24,17 +24,6 @@ function pojo_enqueue_scripts() {
 	
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), POJO_VER_FONT_AWESOME );
-
-	wp_enqueue_style( 'pojo-base-style', get_template_directory_uri() . '/core/assets/css/style.min.css', array( 'pojo-css-framework' ), POJO_CORE_VERSION );
-	
-	$suffix_css = ! is_child_theme() ? '.min' : '';
-	wp_enqueue_style( 'pojo-style', get_stylesheet_directory_uri() . '/assets/css/style' . $suffix_css . '.css', array( 'pojo-css-framework' ), POJO_CORE_VERSION );
-	
-	if ( is_rtl() ) {
-		wp_enqueue_style( 'pojo-base-style-rtl', get_template_directory_uri() . '/core/assets/css/rtl.min.css', array( 'pojo-css-framework', 'pojo-base-style' ), POJO_CORE_VERSION );
-		
-		wp_enqueue_style( 'pojo-style-rtl', get_stylesheet_directory_uri() . '/assets/css/rtl' . $suffix_css . '.css', array( 'pojo-css-framework', 'pojo-style' ), POJO_CORE_VERSION );
-	}
 	
 	if ( POJO_DEVELOPER_MODE ) {
 		wp_register_script( 'pojo-modernizr', get_template_directory_uri() . '/core/assets/js/modernizr-2.6.2.min.js', false, '2.6.2' );
@@ -106,6 +95,20 @@ function pojo_enqueue_scripts() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'pojo_enqueue_scripts', 100 );
+
+function pojo_enqueue_styles() {
+	wp_enqueue_style( 'pojo-base-style', get_template_directory_uri() . '/core/assets/css/style.min.css', array( 'pojo-css-framework' ), POJO_CORE_VERSION );
+
+	$suffix_css = ! is_child_theme() ? '.min' : '';
+	wp_enqueue_style( 'pojo-style', get_stylesheet_directory_uri() . '/assets/css/style' . $suffix_css . '.css', array( 'pojo-css-framework' ), POJO_CORE_VERSION );
+
+	if ( is_rtl() ) {
+		wp_enqueue_style( 'pojo-base-style-rtl', get_template_directory_uri() . '/core/assets/css/rtl.min.css', array( 'pojo-css-framework', 'pojo-base-style' ), POJO_CORE_VERSION );
+
+		wp_enqueue_style( 'pojo-style-rtl', get_stylesheet_directory_uri() . '/assets/css/rtl' . $suffix_css . '.css', array( 'pojo-css-framework', 'pojo-style' ), POJO_CORE_VERSION );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'pojo_enqueue_styles', 600 );
 
 function pojo_admin_print_scripts() {
 	wp_enqueue_media();

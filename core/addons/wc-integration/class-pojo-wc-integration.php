@@ -8,6 +8,12 @@ class Pojo_Woocommerce_Integration {
 		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 	}
 
+	public function register_widgets() {
+		register_widget( 'Pojo_Widget_WC_Products' );
+		register_widget( 'Pojo_Widget_WC_Products_Category' );
+		register_widget( 'Pojo_Widget_WC_Product_Categories' );
+	}
+
 	public function page_builder_widgets( $widgets ) {
 		$widgets[] = 'Pojo_Widget_WC_Products';
 		$widgets[] = 'Pojo_Widget_WC_Products_Category';
@@ -17,12 +23,15 @@ class Pojo_Woocommerce_Integration {
 	}
 
 	public function cart_menu( $items, $args ) {
+		if ( ! current_theme_supports( 'pojo-wc-menu-cart' ) )
+			return $items;
+		
 		$has_item = false;
 		
-		if ( 'primary' === $args->theme_location && current_theme_supports( 'pojo-wc-menu-cart' ) && get_theme_mod( 'chk_enable_wc_menu_cart' ) )
+		if ( 'primary' === $args->theme_location && get_theme_mod( 'chk_enable_wc_menu_cart' ) )
 			$has_item = true;
 
-		if ( 'sticky_menu' === $args->theme_location && current_theme_supports( 'pojo-wc-menu-cart' ) && get_theme_mod( 'chk_enable_wc_menu_cart_sticky' ) )
+		if ( 'sticky_menu' === $args->theme_location && get_theme_mod( 'chk_enable_wc_menu_cart_sticky' ) )
 			$has_item = true;
 		
 		if ( $has_item ) {
@@ -137,11 +146,12 @@ class Pojo_Woocommerce_Integration {
 	public function __construct() {
 		add_theme_support( 'woocommerce' );
 		
-		include( 'widgets/class-pojo-widget-wc-products.php' );
-		include( 'widgets/class-pojo-widget-wc-products-category.php' );
-		include( 'widgets/class-pojo-widget-wc-product-categories.php' );
+		include( 'widgets/class-wc-products.php' );
+		include( 'widgets/class-wc-products-category.php' );
+		include( 'widgets/class-wc-product-categories.php' );
 		
 		add_action( 'init', array( &$this, 'init' ), 300 );
+		add_filter( 'pojo_widgets_registered', array( &$this, 'register_widgets' ) );
 		add_filter( 'pojo_builder_widgets', array( &$this, 'page_builder_widgets' ) );
 		add_filter( 'wp_nav_menu_items', array( &$this, 'cart_menu' ), 10, 2 );
 		add_filter( 'woocommerce_add_to_cart_fragments', array( &$this, 'cart_menu_add_to_cart_fragment' ), 10, 2 );
